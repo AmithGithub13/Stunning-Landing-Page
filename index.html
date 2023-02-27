@@ -1,23 +1,290 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        header{
+            display: flex;
+            gap: 370px;
+            align-items: center;
+            /* padding-top: 20px; */
+            justify-content: center;
+            font-family:serif;
+            margin-top: 25px;
+        }
+        #logo{
+            width: 110px;
+            height: 50px;
+            margin-left: 50px;
+            
+        }
+
+        #menulist{
+            display: flex;
+            gap: 70px;
+            padding-bottom: 30px;
+        }
+        .menu{
+            text-decoration: none;
+            color: grey;
+            margin-top: 30px;
+            font-size: 15px;
+            font-weight: 800;
+        }
+        a:hover{
+            border-bottom: 3px solid;
+            border-color: #8071D0;
+            ;
+            color: black;
+            
+        }
+        #account{
+            font-size: 15px;
+            height: 20px;
+            width: 150px;
+            border-radius: 25px;
+            margin-right: 50px;
+            font-weight: 800;
+            background-color:  #FFD8DB;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #5243C0;
+        }
+        #account:hover{
+            border-bottom: 3px solid;
+            border-color: #210c96;
+            ;
+            color: black;
+        }
+        #landing-section-image{
+            width: 530px;
+            position: relative;
+            top: -130px;
+            left: 750px;
+        }
+        #st{
+            font-size: 55px;
+            font-weight: bolder;
+            display: block;
+            width: 300px;
+            position: relative;
+            top: 30px;
+            left: 250px;
+        }
+        #wr{
+            font-size: 55px;
+            font-weight: bolder;
+            display: block;
+            width: 300px;
+            position: relative;
+            top: 31px;
+            left: 251px;
+        }
+        #fullstop{
+            display: inline;
+            font-size: 22px;
+            color: #5243C0;
+            position: relative;
+            right: 10px;
+        }
+        #first{
+            display: inline;
+            position: relative;
+            top: 50px;
+            left: 251px;
+            font-size: 16px;
+            color: grey;
+        }
+        #second{
+            position: relative;
+            top: 58px;
+            left: 252px;
+            color: grey;
+        }
+        #button{
+            font-size: 15px;
+            height: 18px;
+            width: 160px;
+            border-radius: 25px;
+            margin-right: 50px;
+            font-weight: 800;
+            background-color:  #5243C0;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color:#ffffff ; 
+            position: relative;
+            top: -390px;
+            left: 252px;
+        }
+        #button:hover{
+            border-bottom: 3px solid;
+            border-color: #210c96;
+            ;
+            color: black;
+        }
+        #up{
+            position: relative;
+            top: -446px;
+            left: 420px;
+        }
+        #up:hover{
+            width: 80px;
+            height: 80px;
+        }
+        #down{
+            position: relative;
+            top: -446px;
+            left: 420px;
+        }
+        #down:hover{
+            width: 80px;
+            height: 80px;
+        }
+
+        .dmm{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            width: 400px;
+            height: 50px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            position: relative;
+            top: -410px;
+            left: 250px;
+        }
+        .dmm:hover{
+            transform: scale(1.1);
+            background-color:white;
+            box-shadow: 2px 1px 50px grey;
+        }
+        #minus1{
+            width: 22px;
+            height: 10px;
+            background-color: #FED7DA;
+            border-radius: 10px;
+            position: relative;
+            left: 8px;
+        }
+        #minus2{
+            width: 22px;
+            height: 10px;
+            background-color: #FD6534;
+            border-radius: 10px;
+            position: relative;
+            left: 8px;
+        }
+        #minus3{
+            width: 22px;
+            height: 10px;
+            background-color: #9ED095;
+            border-radius: 10px;
+            position: relative;
+            left: 8px;
+        }
+        #minus4{
+            width: 22px;
+            height: 10px;
+            background-color: #FED7DA;
+            border-radius: 10px;
+            position: relative;
+            left: 8px;
+        }
+        .color{
+            position: relative;
+            left: 10px;
+            border: solid 2px #FFE4A0;
+            border-radius: 50%;
+        }
+        .des,.date{
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+        .date{
+            position: relative;
+            left: 8px;
+            display: flex;
+            justify-content: center;
+        }
+        #cards{
+            display: grid;
+            gap: 3px;
+        }
+        #one{
+            position: relative;
+            left: 5px;
+        }
+        #two{
+            position: relative;
+            left: 3px;
+        }
+        #three{
+            position: relative;
+            left: -3px;
+        }
+        #four{
+            position: relative;
+            left: -12px;
+        }
+        #sec2{
+            gap: 21px;
+        }
+        #profile4{
+            position: relative;
+            left: 17px;
+        }
+        #profile2{
+            position: relative;
+            left: -3px;
+        }
+        
+       
+    </style>
+    
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+    <header>
+        <div><img src="./Assets/Images/stunning-logo.png" alt="stunning-logo" id="logo"></div>
+        <div id="menulist">
+            <a href="#" class="menu">Home</a>
+            <a href="#" class="menu">About</a>
+            <a href="#" class="menu">Blog</a>
+            <a href="#" class="menu">Jobs</a>
+        </div>
+        <div id="account">Your Account</div>
+    </header>
+    <main>
+        <div id="st">Stunning</div>
+        <div id="wr">Workplace <div id="fullstop">&#9632;</div></div>
+        <div id="first">With Stunning, remote teams can organize projects,</div>
+        <div id="second">manage shifting priorities, and get work done.</div>
+        <img src="./Assets/Images/landing-section-image.png" alt="landing-section-image" id="landing-section-image">
+        <div id="button">New Account</div><img src="./Assets/Images/arrow-up.png" alt="up" id="up">
+        <img src="./Assets/Images/arrow-down.png" alt="up" id="down">
+        <div id="cards">
 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+        <div class="dmm" id="sec1"><img src="./Assets/Images/tick-gray.png" alt="tick" class="tick"><div class="des">Dmm design</div><img src="./Assets/Images/user-pink.png" alt="pink" class="color" id="one"><div class="date">20 Dec</div><div id="minus1"></div></div>
+
+        <div class="dmm" id="sec2"><img src="./Assets/Images/tick-gray.png" alt="tick" class="tick" id="two"><div class="des">Blur Animation</div><img src="./Assets/Images/user-orange.png" alt="orange" class="color" id="profile2"><div class="date">22 Dec</div><div class="minus" id="minus2"></div></div>
+
+        <div class="dmm" id="sec3"><img src="./Assets/Images/tick-gray.png" alt="tick" class="tick"  id="three"><div class="des">Illustration</div><img src="./Assets/Images/user-blue.png" alt="blue" class="color"><div class="date">26 Dec</div><div class="minus" id="minus3"></div></div>
+
+        <div class="dmm" id="sec4"><img src="./Assets/Images/tick-gray.png" alt="tick" class="tick"  id="four"><div class="des">Refunds</div><img src="./Assets/Images/user-red.png" alt="red" class="color" id="profile4"><div class="date">28 Dec</div><div class="minus" id="minus4"></div></div>
+
+       
+
+       
+        </div>
+    </main>
 </body>
-
 </html>
